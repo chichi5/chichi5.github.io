@@ -1,0 +1,85 @@
+$w-100:100%;
+$h-100:100%;
+$h-100v:100vh;
+$foorer-bg-color: gray;
+
+* {
+    box-sizing: border-box;
+}
+
+/*父層*/
+#parallax {
+    position: relative;
+    height: 6000px;
+
+    /* 第一部分 製造足夠空間給position: sticky; */
+
+    .background {
+        width: $w-100;
+        height: $h-100v;
+        background-image: url('https://www.natgeomedia.com/userfiles/sm/sm1920_images_A1/10433/2020012052429333.jpg');
+        background-size: cover;
+        background-position: center;
+
+        position: sticky;
+        /*滾動黏滯定位 */
+        top: 10px;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .parallax_text {
+        font-size: 40px;
+        color: aliceblue;
+        width: 50%;
+        position: absolute;
+    }
+}
+
+.banner {
+    width: $w-100;
+    height: $h-100v;
+    /* height: calc(100vh - 56px); */
+    @media (max-width: 991px) {
+        height: auto;
+    }
+
+    .swiper-container {
+        width: $w-100;
+        height: $h-100;
+    }
+
+    .swiper-wrapper{
+        .swiper-slide{
+            .swiper-bg-1,
+            .swiper-bg-2,
+            .swiper-bg-3 {
+                width: $w-100;
+                height: $h-100;
+                background-position: center;
+                background-size: cover;
+            }
+            .swiper-bg-1 {
+                background-image: url('https://www.scitecheuropa.eu/wp-content/uploads/2019/09/Colour-bird-e1568033112774.jpg');
+            }
+
+            .swiper-bg-2 {
+                background-image: url('https://www.scitecheuropa.eu/wp-content/uploads/2019/09/Colour-bird-e1568033112774.jpg');
+            }
+
+            .swiper-bg-3 {
+                background-image: url('https://www.scitecheuropa.eu/wp-content/uploads/2019/09/Colour-bird-e1568033112774.jpg');
+            }
+        }
+    }
+}
+
+
+.foorer {
+    width: $w-100;
+    height: 50px;
+    background-color: $foorer-bg-color;
+}
+    
