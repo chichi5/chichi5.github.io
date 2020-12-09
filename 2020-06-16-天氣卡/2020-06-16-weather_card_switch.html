@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>weather_card</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif, 微軟正黑體;
+            margin: 0;
+        }
+
+
+        .cards {
+            padding: 10px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+
+        .card {
+            width: 360px;
+            /* text-align: center; */
+            /* color: brown; */
+            /* border: 1px solid black; */
+            margin: 20px 0;
+            padding: 10px;
+            box-shadow: 0px 0px 8px 3px #888888;
+            border-radius: 2px;
+        }
+
+        .card_top{     
+            /* background-color: rebeccapurple;*/
+            padding-left: 20px;
+            
+        }
+        h1{
+            font-size: 36px;
+            text-align: left;
+            color: black;
+        }
+
+        h2{
+            font-size: 16px;
+            text-align: left;
+            color: gray;
+        }
+
+        h3{
+            font-size: 70px;
+            text-align: left;
+            color: black;
+            line-height: 120px;            
+        }
+
+        .card_mid{
+            display: flex;
+            margin: 10px 0 ;
+            padding-left: 20px;
+        }
+
+        .card_left{
+            width: 50%;
+            /* justify-content: flex-end; */
+            /* background-color: seagreen;  */
+            
+        }
+
+        .card_right{
+            width: 50%;
+            justify-content: center;
+            /* background-color: tan;  */
+           
+        }
+
+        .card_right_img{
+            width: 60%;
+            margin-left: 35px;
+            
+        }
+
+        h4{
+            font-size: 24px;
+            text-align: center;
+            color: black;
+        }
+
+        .card_b{
+            display: flex;
+            justify-content: center;
+        }
+
+        .card_b_img{
+            width: 30px;
+            float: left;
+            margin: 0 10px 0 0;
+        }
+
+        p{
+            font-size: 24px;
+            text-align: left;
+        }
+        
+        
+    </style>
+</head>
+
+<body>
+    <div class="cards">
+        <!-- <div class="card">
+            <div class="card_top">
+                <h1>台中市</h1>
+                <h2>日期:</p>
+            </div>
+            <div class="card_mid">
+                <div class="card_left">
+                    <h3>25C</h3>
+                </div>
+                <div class="card_right">
+                    <img class="card_right_img" src="https://www.cwb.gov.tw/V8/assets/img/weather_icons/weathers/svg_icon/day/02.svg" alt="">
+                    <h4>舒適度:</h4>
+                </div>
+            </div>
+            
+            <div class="card_b">
+                <img class="card_b_img" src="../img/雨傘.png" alt="">
+                <p>降雨率:</p>
+            </div>
+        </div> -->
+    </div>
+
+   
+
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script>
+        var cards = document.querySelector('.cards')
+
+        axios.get('https://opendata.cwb.gov.tw/api/v1/rest/datastore/F-C0032-001?Authorization=CWB-B5282D9D-8FDD-40E9-AD48-B1DF3270465D')
+            .then(function (response) {
+                // handle success
+                var response_data = response.data;
+                // console.log(response.data);
+
+                //抓到22個縣市
+                var locations = response_data.records.location
+                locations.forEach(element_location => {
+                    // console.log(element_location);
+
+                    var locationName = element_location.locationName
+                    var startTime = element_location.weatherElement[0].time[0].startTime;
+                    var wx = element_location.weatherElement[0].time[0].parameter.parameterName;
+                    var MaxT = element_location.weatherElement[4].time[0].parameter.parameterName;
+                    var minT = element_location.weatherElement[2].time[0].parameter.parameterName;
+                    var pop = element_location.weatherElement[1].time[0].parameter.parameterName;
+                    var ci = element_location.weatherElement[3].time[0].parameter.parameterName;
+                                    
+                                    
+                    switch (pop) {
+                        case '0':
+                            src='https://www.cwb.gov.tw/V8/assets/img/weather_icons/weathers/svg_icon/day/01.svg'                            
+                            break;
+                        case '10':
+                            src='https://www.cwb.gov.tw/V8/assets/img/weather_icons/weathers/svg_icon/day/02.svg'
+                            break;
+                        // case '20':
+                        //     src='https://www.cwb.gov.tw/V8/assets/img/weather_icons/weathers/svg_icon/day/04.svg'
+
+                        //     break;    
+                        default:
+                            src='https://www.cwb.gov.tw/V8/assets/img/weather_icons/weathers/svg_icon/day/04.svg'
+
+                            break;                    
+                    }     
+
+                    cards.innerHTML = cards.innerHTML + 
+                        `
+                        <div class="card">
+                            <div class="card_top">
+                                <h1>${locationName}</h1>
+                                <h2>${startTime}</h2>
+                            </div>
+                            <div class="card_mid">
+                                <div class="card_left">
+                                    <h3>${MaxT}°C</h3>
+                                </div>
+                                <div class="card_right">
+                                    <img class="card_right_img" src="${src}" alt="">
+                                    <h4>${ci}</h4>
+                                </div>
+                            </div>
+                            
+                            <div class="card_b">
+                                <img class="card_b_img" src="../img/雨傘.png" alt="">
+                                <p>降雨率: ${pop}%</p>
+                            </div>
+                        </div>
+
+                            
+                        `
+                    
+                });
+
+
+            })
+            .catch(function (error) {
+                // handle error
+                console.log(error);
+            })
+
+    </script>
+    
+</body>
+
+</html>

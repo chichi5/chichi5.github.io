@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>vh</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            margin: 0;
+            /* height: 2000px; */
+
+        }
+
+        .full-page {
+            width: 100%;
+            height: 100vh;
+            background-color: antiquewhite;
+        }
+
+        .bg-setting {
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+
+            background-attachment: fixed;
+            /*背景釘住*/
+
+        }
+
+        .mask {
+            width: 100%;
+            height: 100%;
+            background-color: rgba(180, 180, 180, 0.3);
+            position: relative;
+        }
+
+        #nav {
+            width: 100%;
+            height: 100px;
+            padding: 25px 100px;
+            background-color: rgba(255, 255, 255, 0.5);
+
+            position: fixed;
+            /*定位*/
+            top: 0px;
+            left: 0px;
+            z-index: 99;
+
+        }
+
+        .nav-box {
+            position: absolute;
+            bottom: 0;
+            right: 50px;
+        }
+
+        .btn {
+            width: 100px;
+            height: 30px;
+            /* background-color: thistle; */
+            text-align: center;
+            color: rgba(11, 19, 42, 0.7);
+            font-weight: 900;
+            line-height: 30px;
+            /* border-right: 1px solid rgb(30, 30, 30); */
+
+            float: right;
+            margin: 0 20px 10px 0;
+            transition: 0.8s;
+            /*滑鼠移上去時--漸變*/
+        }
+
+        /*滑鼠移上去時*/
+        .btn:hover {
+            width: 120px;
+            text-decoration: underline;
+            background-color: rgba(255, 255, 255, 0.5);
+            border-radius: 4px;
+        }
+
+        .fake {
+            /*製作假錨點*/
+            position: absolute;
+            top: -100px;
+            left: 0px;
+            visibility: hidden;
+            /*隱藏*/
+        }
+
+        #section-1 {
+            background-image: url('img/cute-cat.png');
+            position: relative;
+
+        }
+
+        #section-1 .mask .text-box {
+            width: 300px;
+            height: 70px;
+            background-color: rgba(50, 50, 50, 0.7);
+
+            font-size: 30px;
+            font-weight: 600;
+            color: rgba(225, 225, 225, 0.9);
+            text-align: center;
+            line-height: 70px;
+            letter-spacing: 10px;
+
+            position: absolute;
+            left: calc(50% - 150px);
+            top: calc(50% - 35px);
+        }
+
+        #section-1 .mask .text-box span {
+            margin: 0 -10px 0 0;
+        }
+
+
+        #section-2 {
+            width: 100%;
+            padding: 50px 80px;
+            background-color: rgba(11, 19, 42, 0.9);
+        }
+
+        #section-2 h2 {
+            text-align: center;
+            color: white;
+            letter-spacing: 7px;
+            font-weight: 200;
+        }
+
+        #section-2 h2 span {
+            margin: 0 -7px 0 0;
+        }
+
+        #section-2 p {
+            text-align: justify;
+            line-height: 25px;
+            color: gray;
+        }
+
+        #section-3 {
+            width: 100%;
+            /* height: 400px; */
+            /* background-image: url('img/cute-cat2.jpg'); */
+            position: relative;
+
+        }
+
+        #section-3 .cover{
+            height: 400px;
+            overflow: hidden;
+        }
+
+        #section-3 .mask .text-box {
+            width: 400px;
+            height: 100px;
+            /* background-color: violet; */
+
+            font-size: 30px;
+            font-weight: 600;
+            color: rgba(70, 70, 70, 0.7);
+            text-align: center;
+            line-height: 100px;
+            letter-spacing: 10px;
+
+            position: absolute;
+            left: calc(50% - 200px);
+            top: calc(50% - 50px);
+        }
+
+        #section-3 .mask .text-box span {
+            margin: 0 -7px 0 0;
+        }
+
+        #section-4 {
+            width: 100%;
+            padding: 50px 80px;
+            color: white;
+            letter-spacing: 2px;
+            background-color: rgba(11, 19, 42, 0.9);
+        }
+
+        #section-5 {
+            width: 100%;
+            height: 400px;
+            background-image: url('img/cute-cat3.jpg');
+
+            position: relative;
+        }
+
+        #section-5 .mask .text-box {
+            width: 400px;
+            height: 100px;
+            /* background-color: violet; */
+
+            font-size: 30px;
+            font-weight: 600;
+            color: rgba(70, 70, 70, 0.7);
+            text-align: center;
+            line-height: 100px;
+            letter-spacing: 10px;
+
+            position: absolute;
+            left: calc(50% - 200px);
+            top: calc(50% - 50px);
+        }
+
+        #section-5 .mask .text-box span {
+            margin: 0 -7px 0 0;
+        }
+
+
+
+        #section-6 {
+            width: 100%;
+            padding: 50px 80px;
+            color: white;
+            letter-spacing: 2px;
+            background-color: rgba(11, 19, 42, 0.9);
+        }
+
+        #section-7 {
+            background-image: url('img/cute-cat4.png');
+            position: relative;
+
+        }
+
+        #section-7 .mask .text-box {
+            width: 300px;
+            height: 70px;
+            background-color: rgba(50, 50, 50, 0.7);
+
+            font-size: 30px;
+            font-weight: 600;
+            color: rgba(225, 225, 225, 0.9);
+            text-align: center;
+            line-height: 70px;
+            letter-spacing: 10px;
+
+            position: absolute;
+            left: calc(50% - 150px);
+            top: calc(50% - 35px);
+        }
+
+        #section-7 .mask .text-box span {
+            margin: 0 -10px 0 0;
+        }
+
+        #gototop {
+            position: fixed;
+            right: 20px;
+            bottom: 20px;
+            text-decoration: none;
+        }
+
+        #gototop div {
+            width: 50px;
+            height: 50px;
+            font-size: 15px;
+            background-color: rgba(20, 2, 22, 0.7);
+            color: white;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 50px;
+            text-decoration: none;
+            /*超連結文字底線刪除*/
+
+            transition: 0.5s;
+        }
+
+        #gototop div:hover {
+            width: 80px;
+            height: 80px;
+            font-size: 25px;
+            line-height: 80px;
+            background-color: rgba(99, 0, 110, 0.7);
+        }
+    </style>
+
+
+</head>
+
+<body>
+    <div id="nav">
+        <div class="nav-box">
+            <a href="#s1">
+                <div class="btn">REGION1</div>
+            </a>
+            <a href="#s3">
+                <div class="btn">REGION2</div>
+            </a>
+            <a href="#s5">
+                <div class="btn">REGION3</div>
+            </a>
+            <a href="#s7">
+                <div class="btn">REGION4</div>
+            </a>
+
+        </div>
+    </div>
+
+    <div id="section-1" class="full-page bg-setting">
+        <div id="s1" class="fake"></div> <!-- 製作假錨點 -->
+        <div class="mask">
+            <div class="text-box">
+                <span>LET ME OUT</span>
+            </div>
+        </div>
+    </div>
+
+    <div id="section-2">
+        <h2>
+            <span>PARALLAX DEMO</span>
+        </h2>
+        <p>Parallax scrolling is a web site trend where the background content is moved at a different speed than the
+            foreground content while scrolling. Nascetur per nec posuere turpis, lectus nec libero turpis nunc at, sed
+            posuere mollis ullamcorper libero ante lectus, blandit pellentesque a, magna turpis est sapien duis blandit
+            dignissim. Viverra interdum mi magna mi, morbi sociis. Condimentum dui ipsum consequat morbi, curabitur
+            aliquam pede, nullam vitae eu placerat eget et vehicula. Varius quisque non molestie dolor, nunc nisl
+            dapibus vestibulum at, sodales tincidunt mauris ullamcorper, dapibus pulvinar, in in neque risus odio.
+            Accumsan fringilla vulputate at quibusdam sociis eleifend, aenean maecenas vulputate, non id vehicula lorem
+            mattis, ratione interdum sociis ornare. Suscipit proin magna cras vel, non sit platea sit, maecenas ante
+            augue etiam maecenas, porta porttitor placerat leo.</p>
+    </div>
+
+    <div id="section-3" class="bg-setting">
+        <div id="s3" class="fake"></div>
+        <div class="cover">
+            <img style="width: 100%;" id="section-3-img" src="img/cute-cat2.jpg" alt="">
+        </div>
+        <div class="mask">
+            <div class="text-box">
+                <span>LET ME OUT</span>
+            </div>
+        </div>
+    </div>
+
+    <div id="section-4">Scroll up and down to really get the feeling of how Parallax Scrolling works.</div>
+
+    <div id="section-5" class="bg-setting">
+        <div id="s5" class="fake"></div>
+        <div class="mask">
+            <div class="text-box">
+                <span>GIVE ME OUT</span>
+            </div>
+        </div>
+    </div>
+
+    <div id="section-6">Scroll up and down to really get the feeling of how Parallax Scrolling works.</div>
+
+    <div id="section-7" class="full-page bg-setting">
+        <div id="s7" class="fake"></div>
+        <div class="mask">
+            <div class="text-box">
+                <span>COME BAKE</span>
+            </div>
+        </div>
+    </div>
+
+    <!--右下top-->
+    <a id="gototop" href="#">
+        <div>TOP</div>
+    </a>
+    
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> -->
+    <script src="https://cdn.jsdelivr.net/npm/simple-parallax-js@5.5.1/dist/simpleParallax.min.js"></script>
+    <script>
+        var image = document.querySelector('#section-3-img')
+        // console.log(image);
+        new simpleParallax(image,{
+            orientation: 'right',
+            scale: 2
+        });
+        
+    </script>
+
+
+</body>
+
+</html>
