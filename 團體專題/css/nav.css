@@ -1,0 +1,244 @@
+@charset "UTF-8";
+* {
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
+}
+
+*:before, *:after {
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
+}
+
+html {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  scroll-behavior: smooth;
+}
+
+a {
+  color: unset;
+  text-decoration: unset;
+  /*刪除底線*/
+}
+
+a:hover {
+  color: unset;
+  text-decoration: unset;
+  /*刪除底線*/
+}
+
+.menu_hamburger {
+  z-index: 999;
+  min-height: 100vh;
+  font-family: Roboto, Arial;
+  color: #ADAFB6;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: fixed;
+  right: 0;
+  margin: 0 3% 0 0;
+}
+
+.menu_hamburger .toggle {
+  margin: 0 2% 0 0;
+  display: block;
+  cursor: pointer;
+}
+
+.menu_hamburger .toggle input {
+  display: none;
+}
+
+.menu_hamburger .toggle input + div {
+  width: 20px;
+  height: 14px;
+  position: relative;
+}
+
+.menu_hamburger .toggle input + div div {
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  -webkit-transition: -webkit-transform .5s ease;
+  transition: -webkit-transform .5s ease;
+  transition: transform .5s ease;
+  transition: transform .5s ease, -webkit-transform .5s ease;
+}
+
+.menu_hamburger .toggle input + div div span {
+  display: block;
+  position: absolute;
+  left: 0;
+  right: 0;
+}
+
+.menu_hamburger .toggle input + div div span:first-child {
+  top: 0;
+}
+
+.menu_hamburger .toggle input + div div span:first-child:before, .menu_hamburger .toggle input + div div span:first-child:after {
+  top: 0;
+}
+
+.menu_hamburger .toggle input + div div span:last-child {
+  bottom: 0;
+}
+
+.menu_hamburger .toggle input + div div span:last-child:before, .menu_hamburger .toggle input + div div span:last-child:after {
+  bottom: 0;
+}
+
+.menu_hamburger .toggle input + div div span:before, .menu_hamburger .toggle input + div div span:after {
+  content: '';
+  display: block;
+  width: 47%;
+  height: 2px;
+  border-radius: 1px;
+  background: #fff;
+  position: absolute;
+  -webkit-backface-visibility: hidden;
+  -webkit-transition: border-radius .3s ease, background .4s ease, -webkit-transform .5s ease;
+  transition: border-radius .3s ease, background .4s ease, -webkit-transform .5s ease;
+  transition: transform .5s ease, border-radius .3s ease, background .4s ease;
+  transition: transform .5s ease, border-radius .3s ease, background .4s ease, -webkit-transform .5s ease;
+}
+
+.menu_hamburger .toggle input + div div span:before {
+  left: 0;
+  -webkit-transform-origin: 0 50%;
+          transform-origin: 0 50%;
+  -webkit-transform: translate(1px, 0) scaleX(1.1);
+          transform: translate(1px, 0) scaleX(1.1);
+}
+
+.menu_hamburger .toggle input + div div span:after {
+  right: 0;
+  -webkit-transform-origin: 100% 50%;
+          transform-origin: 100% 50%;
+  -webkit-transform: translate(-1px, 0) scaleX(1.1);
+          transform: translate(-1px, 0) scaleX(1.1);
+}
+
+.menu_hamburger .toggle input + div svg {
+  display: block;
+  fill: none;
+  stroke: #fff;
+  stroke-width: 2px;
+  width: 44px;
+  height: 44px;
+  stroke-linecap: round;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin: -22px 0 0 -22px;
+  stroke-dasharray: 0 82.801 8 82.801;
+  stroke-dashoffset: 82.801;
+  -webkit-transform-origin: 50% 50%;
+          transform-origin: 50% 50%;
+  -webkit-backface-visibility: hidden;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  -webkit-transition: stroke-dashoffset .5s ease, stroke-dasharray .6s ease, stroke .4s ease, -webkit-transform .5s ease;
+  transition: stroke-dashoffset .5s ease, stroke-dasharray .6s ease, stroke .4s ease, -webkit-transform .5s ease;
+  transition: stroke-dashoffset .5s ease, stroke-dasharray .6s ease, transform .5s ease, stroke .4s ease;
+  transition: stroke-dashoffset .5s ease, stroke-dasharray .6s ease, transform .5s ease, stroke .4s ease, -webkit-transform .5s ease;
+}
+
+.menu_hamburger .toggle input + div svg:nth-child(3) {
+  -webkit-transform: rotate(180deg) scale(1);
+          transform: rotate(180deg) scale(1);
+}
+
+.menu_hamburger .toggle input:checked + div div {
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+}
+
+.menu_hamburger .toggle input:checked + div div span:before, .menu_hamburger .toggle input:checked + div div span:after {
+  background: #fff;
+}
+
+.menu_hamburger .toggle input:checked + div div span:first-child:before {
+  -webkit-transform: rotate(45deg) translate(2.2px, -3px) scaleX(1.05);
+          transform: rotate(45deg) translate(2.2px, -3px) scaleX(1.05);
+}
+
+.menu_hamburger .toggle input:checked + div div span:first-child:after {
+  -webkit-transform: rotate(-45deg) translate(-2.2px, -3px) scaleX(1.05);
+          transform: rotate(-45deg) translate(-2.2px, -3px) scaleX(1.05);
+}
+
+.menu_hamburger .toggle input:checked + div div span:last-child:before {
+  -webkit-transform: rotate(-45deg) translate(2.2px, 3px) scaleX(1.05);
+          transform: rotate(-45deg) translate(2.2px, 3px) scaleX(1.05);
+}
+
+.menu_hamburger .toggle input:checked + div div span:last-child:after {
+  -webkit-transform: rotate(45deg) translate(-2.2px, 3px) scaleX(1.05);
+          transform: rotate(45deg) translate(-2.2px, 3px) scaleX(1.05);
+}
+
+.menu_hamburger .toggle input:checked + div svg {
+  stroke-dashoffset: 62;
+  stroke-dasharray: 0 82.801 62 82.801;
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+  stroke: #fff;
+}
+
+.menu_hamburger .toggle input:checked + div svg:nth-child(3) {
+  -webkit-transform: rotate(270deg);
+          transform: rotate(270deg);
+}
+
+.navbtns_hamburger {
+  display: none;
+  z-index: 998;
+  position: fixed;
+  bottom: 24%;
+  right: 0;
+  margin: 0 3% 0 0;
+}
+
+.navbtns_hamburger.active {
+  display: block;
+}
+
+.navbtns_hamburger.active .navbtns_btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.navbtns_hamburger.active .navbtns_btn .btn1 {
+  color: white;
+  font-size: 25px;
+  font-weight: 100;
+  z-index: 2;
+  list-style-type: none;
+  text-align: right;
+}
+
+@media screen and (max-width: 768px) {
+  .menu_hamburger, .navbtns_hamburger {
+    display: none;
+  }
+}
+/*# sourceMappingURL=nav.css.map */

@@ -1,0 +1,329 @@
+.banner {
+    width: 100%;
+    height: 820px;    
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;    
+}
+
+.banner_au{
+    background-image: url('../../img/pagination/meat/au/pagination-meat-banner-au.png');
+}
+
+.banner_jp{
+    background-image: url('../../img/pagination/meat/jp/pagination-meat-banner-jp.png');
+}
+
+.banner_us{
+    background-image: url('../../img/pagination/meat/us/pagination-meat-banner-us.png');
+}
+
+.bar{
+    width: 100%;
+    height: 120px;
+    padding: 62px 0 0 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+.banner .bar .logo{
+    width: 115px;
+    height: 120px;
+    margin: 0 0 0 62px;
+}
+
+.banner .bar .btns{
+    list-style: none;
+    display: flex;
+    /* ↓ 原472px ↓ */
+    width: 550px;
+    justify-content: space-around;
+    align-items: center;
+    margin: 0 62px 0 0;
+}
+
+.banner .bar .btns .btn{
+    color: white;
+    font-size: 24px;
+}
+
+#tab_meat {
+    width: 100%;
+    /* height: 100vh; */
+    background-image: url('../../img/pagination/bg/pagination-bg.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    color: white;
+}
+
+.au_L {
+    width: 100%;
+    height: 500px;
+    background-image: url('../../img/pagination/meat/au/pagination-meat-tab-au-L.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.au_R {
+    width: 100%;
+    height: 500px;
+    background-image: url('../../img/pagination/meat/au/pagination-meat-tab-au-R.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.jp_L {
+    width: 100%;
+    height: 500px;
+    background-image: url('../../img/pagination/meat/jp/pagination-meat-tab-jp-L.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.jp_R {
+    width: 100%;
+    height: 500px;
+    background-image: url('../../img/pagination/meat/jp/pagination-meat-tab-jp-R.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.us_L {
+    width: 100%;
+    height: 500px;
+    background-image: url('../../img/pagination/meat/us/pagination-meat-tab-us-L.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.us_R {
+    width: 100%;
+    height: 500px;
+    background-image: url('../../img/pagination/meat/us/pagination-meat-tab-us-R.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.line_1 {
+    /* width: 100%; */
+    /* height: 100%; */
+    /* background-color: rebeccapurple; */
+    position: relative;
+    top: 0;
+    left: 0;
+}
+
+.line_1::before {
+    content: '';
+    width: 100%;
+    height: 258.44px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-bottom: 1px solid white;
+}
+
+.line_2 {
+    /* width: 100%; */
+    /* height: 100%; */
+    /* background-color: rebeccapurple; */
+    position: relative;
+    top: 0;
+    left: 0;
+}
+
+.line_2::before {
+    content: '';
+    width: 100%;
+    height: 555px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-bottom: 1px solid white;
+}
+
+.line_3 {
+    /* width: 100%; */
+    /* height: 100%; */
+    /* background-color: rebeccapurple; */
+    position: relative;
+    top: 0;
+    left: 0;
+}
+
+.line_3::before {
+    content: '';
+    width: 35%;
+    height: 270px;
+    position: absolute;
+    top: 0;
+    left: 115px;
+    border-bottom: 1px solid white;
+}
+
+.line_4 {
+    /* width: 100%; */
+    /* height: 100%; */
+    /* background-color: rebeccapurple; */
+    position: relative;
+    top: 0;
+    left: 0;
+}
+
+.line_4::before {
+    content: '';
+    width: 35%;
+    height: 250px;
+    position: absolute;
+    top: 0;
+    left: 115px;
+    border-bottom: 1px solid white;
+}
+
+.card_bg {
+    background-color: unset;
+    border: unset;
+}
+
+.text_red {
+    font-size: 82.81px;
+    color: red;
+}
+
+.text_s {
+    font-size: 20px;
+    text-align: justify;
+}
+
+.text_l {
+    font-size: 40px;
+    font-weight: 900;
+}
+
+.text_title1 {
+    font-size: 72px;
+
+}
+
+.text_title2 {
+    font-size: 36px;
+    
+}
+
+@media (max-width: 1199px){
+    .line_3::before {
+        width: 40%;        
+        left: 90px;        
+    }
+
+    .line_4::before {
+        width: 40%;
+        left: 90px;
+    }    
+}
+
+@media (max-width: 991px){
+    .line_1::before {
+        height: 198.44px;        
+    }
+
+    .line_3::before {        
+        width: 35%;
+        height: 150px;        
+        top: 60px;
+        left: 160px;
+        border-right: 1px solid white;
+        border-bottom: none;
+    }
+
+    .line_4::before {       
+        width: 35%;
+        height: 150px;       
+        top: 60px;
+        left: 140px;
+        border-right: 1px solid white;
+        border-bottom: none;
+
+    }    
+}
+
+@media (max-width: 767px){
+    .line_1::before {
+        height: 228.44px;        
+    }
+
+    .line_3::before {        
+        left: 120px;
+    }
+
+    .line_4::before {        
+        left: 120px;
+    }
+    
+}
+
+@media (max-width: 575px){
+    .line_4::before {        
+        left: 100px;
+    }
+    
+}
+
+@media (max-width: 540px){
+    .line_3::before {        
+        left: 100px;
+    }
+
+    .line_4::before {        
+        left: 110px;
+    }
+    
+}
+
+@media (max-width: 470px){
+    .line_3::before {        
+        left: 90px;
+    }
+
+    .line_4::before {        
+        left: 90px;
+    }
+    
+}
+
+@media (max-width: 400px){
+    .line_1::before {
+        height: 248.44px;        
+    }
+
+    .line_3::before {        
+        left: 80px;
+    }
+
+    .line_4::before {        
+        left: 80px;
+    }
+    
+}
+
+@media (max-width: 320px){
+    .line_1::before {
+        height: 268.44px;        
+    }
+
+    .line_3::before {        
+        left: 60px;
+    }
+
+    .line_4::before {        
+        left: 60px;
+    }
+    
+}

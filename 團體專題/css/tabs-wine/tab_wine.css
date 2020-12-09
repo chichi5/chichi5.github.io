@@ -1,0 +1,419 @@
+.banner{
+    width: 100%;
+    height: 820px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.banner_champagne{
+    background-image: url('../../img/pagination/wine/champagne/pagination-wine-banner-champagne.png');
+}
+
+.banner_brandy{
+    background-image: url('../../img/pagination/wine/brandy/pagination-wine-banner-brandy.png');
+}
+
+.banner_red{
+    background-image: url('../../img/pagination/wine/red/pagination-wine-banner-red.png');
+}
+
+.bar{
+    width: 100%;
+    height: 120px;
+    padding: 62px 0 0 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+.banner .bar .logo{
+    width: 115px;
+    height: 120px;
+    margin: 0 0 0 62px;
+}
+
+.banner .bar .btns{
+    list-style: none;
+    display: flex;
+    /* ↓ 原472px ↓ */
+    width: 550px;
+    justify-content: space-around;
+    align-items: center;
+    margin: 0 62px 0 0;
+}
+
+.banner .bar .btns .btn{
+    color: white;
+    font-size: 24px;
+}
+
+#tab_wine {
+    width: 100%;
+    /* height: 100vh; */
+    background-image: url('../../img/pagination/bg/pagination-bg.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    color: white;
+}
+
+.champagne_L {
+    width: 100%;
+    height: 500px;
+    background-image: url('../../img/pagination/wine/champagne/pagination-wine-champagne-L.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.champagne_R {
+    width: 100%;
+    height: 500px;
+    background-image: url('../../img/pagination/wine/champagne/pagination-wine-champagne-R.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.brandy_L {
+    width: 100%;
+    height: 500px;
+    background-image: url('../../img/pagination/wine/brandy/pagination-wine-brandy-L.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.brandy_R {
+    width: 100%;
+    height: 500px;
+    background-image: url('../../img/pagination/wine/brandy/pagination-wine-brandy-R.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.red_L {
+    width: 100%;
+    height: 500px;
+    background-image: url('../../img/pagination/wine/red/pagination-wine-red-L.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.red_R {
+    width: 100%;
+    height: 500px;
+    background-image: url('../../img/pagination/wine/red/pagination-wine-red-R.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.line_1 {
+    /* width: 100%; */
+    /* height: 100%; */
+    /* background-color: rebeccapurple; */
+    position: relative;
+    top: 0;
+    left: 0;
+}
+
+.line_1::before {
+    content: '';
+    width: 100%;
+    height: 190px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-bottom: 1px solid white;
+}
+
+.line_2 {
+    /* width: 100%; */
+    /* height: 100%; */
+    /* background-color: rebeccapurple; */
+    position: relative;
+    top: 0;
+    left: 0;
+}
+
+.line_2::before {
+    content: '';
+    width: 100%;
+    height: 560px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-bottom: 1px solid white;
+}
+
+.line_3 {
+    /* width: 100%; */
+    /* height: 100%; */
+    /* background-color: rebeccapurple; */
+    position: relative;
+    top: 0;
+    left: 0;
+}
+
+.line_3::before {
+    content: '';
+    width: 100%;
+    height: 190px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-bottom: 1px solid white;
+}
+
+.line_4 {
+    /* width: 100%; */
+    /* height: 100%; */
+    /* background-color: rebeccapurple; */
+    position: relative;
+    top: 0;
+    left: 0;
+}
+
+.line_4::before {
+    content: '';
+    width: 100%;
+    height: 560px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-bottom: 1px solid white;
+}
+
+.line_5 {
+    /* width: 100%; */
+    /* height: 100%; */
+    /* background-color: rebeccapurple; */
+    position: relative;
+    top: 0;
+    left: 0;
+}
+
+.line_5::before {
+    content: '';
+    width: 100%;
+    height: 190px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-bottom: 1px solid white;
+}
+
+.line_6 {
+    /* width: 100%; */
+    /* height: 100%; */
+    /* background-color: rebeccapurple; */
+    position: relative;
+    top: 0;
+    left: 0;
+}
+
+.line_6::before {
+    content: '';
+    width: 100%;
+    height: 560px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-bottom: 1px solid white;
+}
+
+.x18 {
+    
+    background-image: url('../../img/pagination/bg/pagination-18禁.png');
+}
+
+.x18_set {
+    width: 100%;
+    height: 176px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.text_s {
+    font-size: 20px;
+    text-align: justify;
+}
+
+.text_l {
+    font-size: 40px;    
+    font-weight: 900;
+
+}
+
+.text_title1 {
+    font-size: 72px;
+
+}
+
+.text_title2 {
+    font-size: 36px;
+    
+}
+
+@media (max-width: 991px){
+    .line_1::before {
+        height: 208.44px;        
+    }
+
+    .line_2::before {
+        height: 288.44px;        
+    }
+
+    .line_3::before {
+        height: 258.44px;        
+    }
+
+    .line_4::before {
+        height: 288.44px;        
+    }
+
+    .line_5::before {
+        height: 258.44px;        
+    }
+
+    .line_6::before {
+        height: 288.44px;        
+    }
+
+    .brandy_L {
+        margin-top: 50px;
+    }
+
+    .champagne_L {
+        margin-top: 50px;
+    }    
+
+    .red_L {
+        margin-top: 50px;
+
+    }
+}
+
+@media (max-width: 768px){
+    .line_2::before {
+        height: 308.44px;        
+    }
+    .x18_set{
+        height: 100px;
+    }
+    
+}
+
+@media (max-width: 549px){
+    .line_2::before {
+        height: 338.44px;        
+    }
+
+    .line_3::before {
+        height: 278.44px;        
+    }
+
+    .line_4::before {
+        height: 318.44px;        
+    }
+
+    .line_5::before {
+        height: 278.44px;        
+    }
+
+    .line_6::before {
+        height: 318.44px;        
+    }
+    
+}
+
+@media (max-width: 480px){
+    .line_2::before {
+        height: 348.44px;        
+    }
+
+    .line_3::before {
+        height: 288.44px;        
+    }
+
+    .line_4::before {
+        height: 328.44px;        
+    }
+    
+    .line_5::before {
+        height: 288.44px;        
+    }
+
+    .line_6::before {
+        height: 328.44px;        
+    }
+}
+
+@media (max-width:414px){
+    .x18_set{
+        height: 60px;
+    }
+}
+
+@media (max-width: 400px){
+    .line_1::before {
+        height: 248.44px;        
+    }
+
+    .line_2::before {
+        height: 368.44px;        
+    }    
+
+    .line_3::before {
+        height: 308.44px;        
+    }
+
+    .line_4::before {
+        height: 348.44px;        
+    }
+
+    .line_5::before {
+        height: 308.44px;        
+    }
+
+    .line_6::before {
+        height: 348.44px;        
+    }
+
+
+}
+@media (max-width:375px){
+    .x18_set{
+        height: 50px;
+    }
+}
+
+@media (max-width: 320px){
+    .line_1::before {
+        height: 248.44px;        
+    }
+
+    .line_2::before {
+        height: 408.44px;        
+    }    
+
+    .line_3::before {
+        height: 348.44px;        
+    }
+
+    .line_4::before {
+        height: 388.44px;        
+    }
+
+    .line_5::before {
+        height: 348.44px;        
+    }
+
+    .line_6::before {
+        height: 388.44px;        
+    }
+}

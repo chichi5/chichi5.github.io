@@ -1,0 +1,476 @@
+#food {
+    width: 100%;
+    height: 100vh;
+    background-image: url('../img/food/PC/food-PC-bg.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: relative;
+    display: flex;
+}
+
+#food_phone{
+    display: none;
+}
+
+/* 卡片區域，不含按鈕條 */
+
+#food .card_style_t{
+    width: 1050px;
+    height: 519px;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    z-index: 1;
+    display: none;
+    }
+    
+#food .card_style_b{
+    width: 1050px;
+    height: 519px;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    z-index: 1;
+    display: none;
+    }
+
+/* 按鈕條 */
+
+.card-btns{
+    width: 80px;
+    height: 430px;
+    /* background-color: white; */
+    position: absolute;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 180px 0;
+}
+.card-btns-l{
+    background: linear-gradient(to right,rgb(255, 255, 255),rgb(255, 255, 255),rgb(220, 220, 220),rgb(150, 150, 150));
+
+}
+.card-btns-r{
+    background: linear-gradient(to left,rgb(255, 255, 255),rgb(255, 255, 255),rgb(220, 220, 220),rgb(150, 150, 150));
+
+}
+
+#card-btn-t{
+    left: -80px;    
+}
+
+#card-btn-b{
+    right: 0px;    
+}
+
+/* 卡片全域，包含按鈕條 */
+
+.card-area-t{
+    top: 17%;
+    left: 10%;
+}
+
+.card-area-b{
+    bottom: 17%;
+    right: 10%;
+    }
+
+.card-area-style{
+    width: 1130px;
+    height: 489px;
+    position: absolute;
+    display: flex;
+    align-items:center;
+    }
+
+/* 不規則字卡 */
+
+/* 酩悅香檳方形區域 */
+.card-t-text-champagne{
+    /* background-color: rgba(65, 105, 225, 0.178); */
+    width: 400px;
+    height: 519px;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    shape-outside:polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    float: right;
+
+    margin-left: 80px;
+}
+
+/* 香檳以外區域 */
+
+.card-t-text{
+    /* background-color: rgba(65, 105, 225, 0.178); */
+    width: 671px;
+    height: 519px;
+    clip-path: polygon(36% 0, 100% 0, 100% 100%, 0 100%);
+    shape-outside:polygon(36% 0, 100% 0, 100% 100%, 0 100%);
+    float: right;
+
+    margin-left: 80px;
+}
+
+
+
+.TinC-t{
+    font-size: 20px;
+    color: black;
+    padding: 0 0 0 0;
+}
+
+.TinC-t h3{
+    font-weight: 700;
+    margin:120px 0 0 70px;
+}
+
+.TinC-t h4{
+    font-weight: 700;
+    margin:10px 0 0 60px;
+}
+
+.TinC-t p{
+    margin: 0 0 100px 0;
+    padding: 50px;
+    line-height: 35px;
+    text-align: justify;
+}
+
+.card-b-text{
+    /* background-color: royalblue; */
+    width: 671px;
+    height: 519px;
+    clip-path: polygon(0 0, 100% 0, 64% 100%, 0 100%);
+    shape-outside:polygon(0 0, 100% 0, 64% 100%, 0 100%);
+    float: left;
+    margin-right: 80px;
+}
+
+.TinC-b{
+    font-size: 20px;
+    color: black;
+}
+
+.TinC-b h3{
+    margin:120px 0 0 640px;
+    font-weight: 700;
+}
+
+.TinC-b h4{
+    font-weight: 700;
+    margin:10px 0 0 60px;
+}
+
+.TinC-b p{
+    margin: 0 0 100px 0;
+    padding: 50px;
+    line-height: 35px;
+    text-align: justify;
+    }
+
+.more{
+    float: right;
+    color: rgb(39, 39, 39);
+    font-size: 20px;
+    height: 40px;
+    line-height: 40px;
+}
+
+/* 圖卡陰影遮罩 */
+
+#fdmusk-t{
+    background-color: rgba(00, 00, 00, 0.7);
+    position: absolute;
+    /* top: 5.4%; */
+    /* left: 10%; */
+    width: 1050px;
+    height: 520px;
+}
+
+#fdmusk-b{
+    background-color: rgba(00, 00, 00, 0.7);
+    position: absolute;
+    /* bottom: 7%; */
+    /* right: 14.2%; */
+    /* right: calc(10% + 80px); */
+    width: 1050px;
+    height: 520px;
+}
+
+.fdmusk{
+    z-index: 2;
+}
+
+.fdmusk.active{
+    z-index: -1;
+}
+
+/* 圖卡背景 */
+
+#t_card_1{
+    background-image: url('../img/food/PC/food-wine-champagne-2.png');
+}
+
+#t_card_2{
+    background-image: url('../img/food/PC/food-wine-brandy.png');
+}
+
+#t_card_3{
+    background-image: url('../img/food/PC/food-wine-red.png');
+}
+
+#b_card_1{
+    background-image: url('../img/food/PC/food-meat-au.png');
+}
+
+#b_card_2{
+    background-image: url('../img/food/PC/food-meat-jp.png');
+}
+
+#b_card_3{
+    background-image: url('../img/food/PC/food-meat-us_1.png');
+}
+
+
+#food .card_style_t.active{
+    display: block;
+}
+#food .card_style_b.active{
+    display: block;
+}
+
+#food .card-area-style.active{
+    z-index: 3;
+}
+
+.btn_area{
+    width: 50px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.fct_btn{
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: rgb(200, 200, 200);
+}
+
+.fcb_btn{
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: rgb(200, 200, 200);
+}
+
+#food .card-btns .btn_area .fct_btn.active{
+    background-color: rgb(160, 160, 160);
+    width: 20px;
+    height: 20px;
+}
+
+#food .card-btns .fcb_btn.active{
+    background-color: rgb(160, 160, 160);
+    width: 20px;
+    height: 20px;
+}
+
+
+@media screen and (max-width:1427px){
+    #food .card_style_t,#food .card_style_b,#fdmusk-t,#fdmusk-b{
+        width: 525px;
+        height: 260px;
+    }
+    .card-area-style{
+        width: 665px;
+        height: 245px;
+    }
+    .card-btns{
+        width: 40px;
+        height: 215px;
+        padding: 60px 0;
+    }
+    .fct_btn,.fcb_btn{
+        width: 7.5px;
+        height: 7.5px;
+    }
+    #food .card-btns .btn_area .fct_btn.active,#food .card-btns .btn_area .fcb_btn.active{
+        width: 10px;
+        height: 10px;
+    }
+    #card-btn-t{
+        left: -40px;    
+    }
+    #card-btn-b{
+        right: 100px;    
+    }
+    .card-area-t{
+        top: 25%;
+        left: 10%;
+    }
+    
+    .card-area-b{
+        bottom: 25%;
+        right: 10%;
+    }
+    #fdmusk-t{
+        /* top: 24.2%; */
+        /* left: 10%; */
+    }
+    #fdmusk-b{
+        /* bottom: 24.2%; */
+        /* right: calc(25% - 40px); */
+    }
+
+    .card-t-text-champagne{
+        /* background-color: rgba(65, 105, 225, 0.178); */
+        width: 200px;
+        height: 259.5px;
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+        shape-outside:polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    
+        margin-left: 40px;
+    }
+
+    .card-t-text{
+        /* background-color: rgba(65, 105, 225, 0.178); */
+        width: 335.5px;
+        height: 259.5px;
+        clip-path: polygon(36% 0, 100% 0, 100% 100%, 0 100%);
+        shape-outside:polygon(36% 0, 100% 0, 100% 100%, 0 100%);
+    
+        margin-left: 20px;
+    }
+    .card-b-text{
+        /* background-color: royalblue; */
+        width: 335.5px;
+        height: 259.5px;
+        clip-path: polygon(0 0, 100% 0, 64% 100%, 0 100%);
+        shape-outside:polygon(0 0, 100% 0, 64% 100%, 0 100%);
+        margin-right: 20px;
+    }
+
+    .TinC-t{
+        font-size: 12px;
+        color: black;
+        padding: 0 0 0 0;
+    }
+    
+    .TinC-t h3{
+        font-size: 18px;
+        margin:30px 0 0 20px;
+    }
+    
+    .TinC-t h4{
+        font-size: 15px;
+        margin:5px 0 0 20px;
+    }
+    
+    .TinC-t p{
+        margin: 0 0 50px 0;
+        padding: 20px;
+        line-height: 17.5px;
+    }
+    .TinC-b{
+        font-size: 12px;
+    }
+    
+    .TinC-b h3{
+        font-size: 18px;
+        margin:20px 0 0 40px;
+    }
+    
+    .TinC-b h4{
+        font-size: 15px;
+        margin:10px 0 0 60px;
+    }
+    
+    .TinC-b p{
+        margin: 0 0 100px 0;
+        padding: 20px;
+        line-height: 17.5px;
+        }
+    .more{
+        font-size: 10px;
+        height: 20px;
+        line-height: 20px;
+    }
+}
+
+@media screen and (max-width:768px){
+    #food{
+        display: none;
+    }
+    #food_phone{
+        background-image: url('../img/food/phone/food-phone-bg.png');
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        display: block;
+    }
+    .card-title{
+        font-size: 24px;
+        font-weight: 700;
+    }
+    .card-text{
+        font-size: 18px;
+    }
+    .phone_card_t{
+        display: none;
+        background-color: white;
+    }
+    .phone_card_t.active{
+        display: block;
+    }
+    .phone_card_btns_t{
+        width: 90%;
+        background-color: rgba(90, 90, 90, 0.808);
+    }
+    .phone_btn_t{
+        background-color: #C9CACA;
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+    }
+    .phone_btn_t.active{
+        background-color: #9FA0A0;
+        width: 10px;
+        height: 10px;
+    }
+
+    .card-body{
+        min-height: 220px;
+        }
+
+    .phone_card_b{
+        display: none;
+        background-color: white;
+    }
+    .phone_card_b.active{
+        display: block;
+    }
+    .phone_card_btns_b{
+        width: 90%;
+        background-color: rgba(90, 90, 90, 0.808);
+    }
+    .phone_btn_b{
+        background-color: #C9CACA;
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+    }
+    .phone_btn_b.active{
+        background-color: #9FA0A0;
+        width: 10px;
+        height: 10px;
+    }
+}
+
+@media screen and (max-width:376px){
+    .card-body{
+        min-height: 270px;
+        }
+}

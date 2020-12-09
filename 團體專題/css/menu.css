@@ -1,0 +1,159 @@
+#menu {
+    width: 100%;
+    background-image: url('../img/menu/menu-bg.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: relative;
+    /* display: none; */
+}
+
+.title_bg{
+    position: absolute;
+    width: 570px;
+    height: 50px;
+    background-color: rgba(181, 181, 181, 0.8);
+    position: relative;
+    /* top: 50px; */
+    font-size: 2rem;
+    font-family: 'Lexend Exa', sans-serif;
+    font-weight: 600;
+    line-height:50px;
+   
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+
+}
+.title_bg .title_l{
+    width: 100px;
+    height: 4px;
+    background-color: black;
+    position: relative;
+    top: 25px;
+}
+
+.title_bg p{
+    margin: 0 15px;
+    color: black;
+}
+.title_bg .title_r {
+    display: none;
+}
+
+#menu-phone{
+    width: 100%;
+    height: 100vh;
+    background-image: url('../img/menu/menu-bg.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: relative;
+    display: none;
+}
+#menu-phone .menu-swiper img{
+    width: 100%;
+    height: 70vh;
+    position: relative;
+    bottom: 50px;
+}
+
+.swiper-slide{
+    /* text-align: center;
+      font-size: 18px; */
+      /* background: #fff; */
+
+      /* Center slide text vertically */
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: -webkit-flex;
+      display: flex;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      -webkit-justify-content: center;
+      justify-content: center;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      -webkit-align-items: center;
+      align-items: center;
+}
+
+.menu-s{
+    
+    position: relative;
+    bottom: 150px !important;
+    /* margin: 0 0 30px 0; */
+    
+}
+
+
+/* 左右箭頭顏色 */
+.swiper-button-next:after, .swiper-button-prev:after {
+color: white;
+}
+
+
+
+
+/* 下方點點顏色 */
+:root{
+    --swiper-theme-color: #fff !important;
+}
+
+
+@media (max-width: 768px){
+    #menu{
+        display: none;
+    }
+    #menu-phone{
+        display: block;
+    }
+    
+    .title_bg{  
+        width: 35%;
+        height: 50px;
+        font-size: 1.5rem;
+        line-height:50px;
+        justify-content: start;
+    }
+
+    
+    .title_bg .title_l{
+        width: 90px;
+        height: 3px;
+        background-color: black;
+        position: relative;
+        top: 25px;
+    }
+    /* .title_bg .title_r {
+        display: block;
+        width: 100px;
+        height: 6px;
+        background-color: black;
+        position: relative;
+        top: 35px;
+    } */
+
+}
+
+@media (max-width: 576px){
+    .title_bg{  
+        width: 45%;
+        top: 30px;
+        /* background-color: unset; */
+    }    
+    .title_bg p{
+        margin: 0 15px;
+        /* color: white; */
+    }
+    .title_bg .title_l{
+        width: 60px; 
+    }
+    .title_bg .title_r {       
+        width: 60px;
+    }
+
+}
+
+
+
