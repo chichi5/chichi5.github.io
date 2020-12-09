@@ -1,0 +1,700 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MeatGQ</title>
+    <!-- icon delete -->
+    <link href="favicon.ico" rel="shortcut icon">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <!-- Nav CSS -->
+    <link rel="stylesheet" href="./css/nav.css">
+    <!-- Swiper CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.1.0/css/swiper.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <!-- CSS 外連 -->
+    <link rel="stylesheet" href="./css/basic.css">
+    <link rel="stylesheet" href="./css/banner.css">
+    <link rel="stylesheet" href="./css/menu.css">
+    <link rel="stylesheet" href="./css/about.css">
+    <link rel="stylesheet" href="./css/food.css">
+    <link rel="stylesheet" href="./css/media.css">
+    <link rel="stylesheet" href="./css/footer.css">
+
+    <!-- AOS link -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+
+    <!-- media_video CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+    <!-- Menu CSS -->
+    <link rel="stylesheet" href="./css/menu.css">
+    <!-- <link rel="stylesheet" href="./book/css/magazine.css"> -->
+    <link rel="stylesheet" href="./book/css/jquery.ui.html4.css">
+    <link rel="stylesheet" href="./book/css/jquery.ui.css">
+
+    <!-- Menu 標題字型 -->
+    <link href="https://fonts.googleapis.com/css2?family=Lexend+Exa&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <!-- 首頁 -->
+    <nav>
+        <div class="banner">
+
+
+            <!-- 漢堡條 縮RWD暫時隱藏 -->
+
+
+            <div class="menu_hamburger lax"
+                data-lax-opacity="(document.querySelector('.menu_hamburger').offsetTop) 0, (document.querySelector('.menu_hamburger').offsetTop+600) 1">
+                <label class="toggle">
+                    <input id="onoffswitch" type="checkbox" class=" active">
+                    <div>
+                        <div>
+                            <span></span>
+                            <span></span>
+                        </div>
+                        <svg>
+                            <use xlink:href="#path">
+                        </svg>
+                        <svg>
+                            <use xlink:href="#path">
+                        </svg>
+                    </div>
+                </label>
+            </div>
+            <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+                <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 44 44" id="path">
+                    <path d="M22,22 L2,22 C2,11 11,2 22,2 C33,2 42,11 42,22"></path>
+                </symbol>
+            </svg>
+            <div class="navbtns_hamburger lax"
+                data-lax-opacity="(document.querySelector('.menu_hamburger').offsetTop) 0, (document.querySelector('.menu_hamburger').offsetTop+600) 1">
+                <ul class="navbtns_btn ">
+                    <li class="btn1"><a href="#menu_point">MENU</a></li>
+                    <li class="btn1"><a href="#about_point">ABOUT</a></li>
+                    <li class="btn1"><a href="#food_point">FOOD</a></li>
+                    <li class="btn1"><a href="#media_point">MEDIA</a></li>
+                    <li class="btn1"><a href="#footer_point">INFO</a></li>
+                </ul>
+            </div>
+            <div class="navbar">
+                <img class="logo" src="./img/banner/MeatGQ-LOGO.svg" alt="">
+                <ul class="navbtns">
+                    <li class="btn"><a href="#menu_point">MENU</a></li>
+                    <li class="btn"><a href="#about_point">ABOUT</a></li>
+                    <li class="btn"><a href="#food_point">FOOD</a></li>
+                    <li class="btn"><a href="#media_point">MEDIA</a></li>
+                    <li class="btn"><a href="#footer_point">INFO</a></li>
+                </ul>
+            </div>
+            <div class="container">
+                <div id="title_text">
+                    <h1>MEATGQ橡木炙烤牛排館</h1>
+                    <p>獨樹一格的料理手法，特選的食材，不凡的體驗，期望招待不凡的您。</p>
+                </div>
+                <video id="smoke" src="./img/banner/smoke2.mp4" autoplay loop muted></video>
+                <div class="l-ani">
+                    <div class="mask"><video id="charcoal" src="./img/banner/charcoal.mp4" loop autoplay muted></video>
+                        <div class="mask1"><img id="grilled" src="./img/banner/grilled.png" alt=""></div>
+                        <div class="mask2"><img id="meat" src="./img/banner/meat.png" alt=""></div>
+                    </div>
+                </div>
+                <div class="r-ani">
+                    <img id="steak" src="./img/banner/菲力牛_1.png" alt="">
+                </div>
+
+            </div>
+
+            <a href="https://inline.app/booking/-Lgg42Q7X-vm89HPiIkk:inline-live-2a466/-Lgg42TOwb-TFjmSZYRp?language=zh-tw"
+                target="_blank">
+                <div class="order">
+
+                    <div class="order-btn">
+                        <p>線上訂位</p>
+                    </div>
+                </div>
+            </a>
+
+
+        </div>
+    </nav>
+
+
+    <!-- 菜單 -->
+    <section id="menu_point">
+
+        <div id="menu">
+            <div class="title_bg" data-aos="fade-right" data-aos-offset="300" data-aos-easing="ease-in-sine">
+                <!-- title_bg 的 css樣式 可以共用 -->
+                <div class="title_l"></div>
+                <p>MENU</p>
+                <div class="title_r"></div>
+            </div>
+
+            <div id="canvas" data-aos="fade-up" data-aos-duration="3000">
+                <div class="magazine-viewport">
+                    <div class="container">
+                        <div class="magazine">
+                            <!-- Next button -->
+                            <div ignore="1" class="next-button"></div>
+                            <!-- Previous button -->
+                            <div ignore="1" class="previous-button"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Thumbnails -->
+                <div class="thumbnails">
+                    <div>
+                        <ul>
+                            <li class="i">
+                                <img src="./book/pages/1-thumb.jpg" width="76" height="100" class="page-1">
+                                <span>1</span>
+                            </li>
+                            <li class="d">
+                                <img src="./book/pages/2-thumb.jpg" width="76" height="100" class="page-2">
+                                <img src="./book/pages/3-thumb.jpg" width="76" height="100" class="page-3">
+                                <span>2-3</span>
+                            </li>
+                            <li class="d">
+                                <img src="./book/pages/4-thumb.jpg" width="76" height="100" class="page-4">
+                                <img src="./book/pages/5-thumb.jpg" width="76" height="100" class="page-5">
+                                <span>4-5</span>
+                            </li>
+                            <li class="d">
+                                <img src="./book/pages/6-thumb.jpg" width="76" height="100" class="page-6">
+                                <img src="./book/pages/7-thumb.jpg" width="76" height="100" class="page-7">
+                                <span>6-7</span>
+                            </li>
+                            <li class="d">
+                                <img src="./book/pages/8-thumb.jpg" width="76" height="100" class="page-8">
+                                <img src="./book/pages/9-thumb.jpg" width="76" height="100" class="page-9">
+                                <span>8-9</span>
+                            </li>
+                            <li class="d">
+                                <img src="./book/pages/10-thumb.jpg" width="76" height="100" class="page-10">
+                                <img src="./book/pages/11-thumb.jpg" width="76" height="100" class="page-11">
+                                <span>10-11</span>
+                            </li>
+                            <!-- <li class="i">
+                            <img src="pages/12-thumb.jpg" width="76" height="100" class="page-12">
+                            <span>12</span>
+                        </li> -->
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="menu-phone">
+            <div class="title_bg">
+                <!-- title_bg 的 css樣式 可以共用 -->
+                <div class="title_l"></div>
+                <p>MENU</p>
+                <div class="title_r"></div>
+            </div>
+            <div class="swiper-container menu-swiper">
+                <!-- Swiper -->
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide"><img src="./book/pages/1-thumb.jpg"></div>
+                    <div class="swiper-slide"><img src="./book/pages/2-thumb.jpg"></div>
+                    <div class="swiper-slide"><img src="./book/pages/3-thumb.jpg"></div>
+                    <div class="swiper-slide"><img src="./book/pages/4-thumb.jpg"></div>
+                    <div class="swiper-slide"><img src="./book/pages/5-thumb.jpg"></div>
+                    <div class="swiper-slide"><img src="./book/pages/6-thumb.jpg"></div>
+                    <div class="swiper-slide"><img src="./book/pages/7-thumb.jpg"></div>
+                    <div class="swiper-slide"><img src="./book/pages/8-thumb.jpg"></div>
+                    <div class="swiper-slide"><img src="./book/pages/9-thumb.jpg"></div>
+                    <div class="swiper-slide"><img src="./book/pages/10-thumb.jpg"></div>
+                    <div class="swiper-slide"><img src="./book/pages/11-thumb.jpg"></div>
+
+                </div>
+                <!-- Navigation Add Arrows -->
+                <!-- <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div> -->
+
+                <!-- Add Pagination -->
+                <div class="swiper-pagination menu-s"></div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- 關於 -->
+    <section id="about_point">
+        <div id="about" class="container-fluid">
+
+
+            <div class="row">
+                <div class="title_bg" data-aos="fade-right" data-aos-offset="300" data-aos-easing="ease-in-sine">
+                    <!-- title_bg 的 css樣式 可以共用 -->
+                    <div class="title_l"></div>
+                    <p>ABOUT</p>
+                    <div class="title_r"></div>
+                </div>
+            </div>
+
+            <div class="container mb-5" data-aos="zoom-in">
+                <div class="row">
+                    <div class="col-lg-12 p-0">
+                        <div class="area a_bg_set">
+                            <div class="box_push"></div>
+                            <div class="a_text">
+                                <h3>資深名廚 鄧有癸</h3>
+                                <p>鄧有癸投入餐飲逾40年，出身「新濱鐵板燒」並且擔任18年料理長，在離開新濱之後即陸續開設「犇」、「鱻」鐵板燒，並專注研發牛排料理，精益求精的廚藝獲得許多飯店企業家的青睞，受邀擔任廚藝顧問，為數家五星級飯店成功的打造專業牛排館，引領台灣的牛排館進入一個嶄新、國際化的視野，奠定『鐵板達人』、『牛排教父』的地位與榮銜。
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row pt-4">
+                <div class="col-lg-8"></div>
+                <div class="col-lg-2">
+                    <img src="./img/about/簽名-金色.png" class="card-img-top" style="width: 278.554px; height: 96.309px;"
+                        alt="">
+                </div>
+            </div>
+        </div>
+
+        <div id="about-phone" class="container-fluid">
+            <div class="row">
+                <div class="title_bg mb-5">
+                    <!-- title_bg 的 css樣式 可以共用 -->
+                    <div class="title_l"></div>
+                    <p>ABOUT</p>
+                    <div class="title_r"></div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-12 mb-5">
+                    <div class="a_bg_set-phone ">
+                        <div class="box_push-phone"></div>
+                        <div class="a_text-phone">
+                            <h3>資深名廚 鄧有癸</h3>
+                            <p>鄧有癸投入餐飲逾40年，出身「新濱鐵板燒」並且擔任18年料理長，在離開新濱之後即陸續開設「犇」、「鱻」鐵板燒，並專注研發牛排料理，精益求精的廚藝獲得許多飯店企業家的青睞，受邀擔任廚藝顧問，為數家五星級飯店成功的打造專業牛排館，引領台灣的牛排館進入一個嶄新、國際化的視野，奠定『鐵板達人』、『牛排教父』的地位與榮銜。
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row pt-lg-5 nn">
+                <div class="col-5 col-lg-6"></div>
+                <div class="col-2 col-lg-2">
+                    <img src="./img/about/簽名-金色.png" class="card-img-top" style="width: 278.554px; height: 96.309px;"
+                        alt="">
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+
+
+
+
+
+    <!-- 食物 -->
+
+    <section id="food_point">
+        <div>
+            <div id="food">
+
+                <div class="title_bg" data-aos="fade-right" data-aos-offset="300" data-aos-easing="ease-in-sine">
+                    <!-- title_bg 的 css樣式 可以共用 -->
+                    <div class="title_l"></div>
+                    <p>FOOD</p>
+                    <div class="title_r"></div>
+                </div>
+
+
+                <!-- 酒卡 -->
+                <div class="card-area-t card-area-style " data-aos="fade-right">
+                    <div id="fdmusk-t" class="fdmusk"></div>
+
+                    <div id="card-btn-t" class="card-btns card-btns-l">
+                        <div class="btn_area">
+                            <div class="fct_btn active"></div>
+                        </div>
+                        <div class="btn_area">
+                            <div class="fct_btn"></div>
+                        </div>
+                        <div class="btn_area">
+                            <div class="fct_btn"></div>
+                        </div>
+                    </div>
+                    <div id="t_card_1" class="card_style_t active">
+                        <div class="card-t-text-champagne"></div>
+                        <div class="TinC-t">
+                            <h3>酩悅香檳</h3>
+                            <h4>Moet et Chandon</h4>
+                            <p>在味蕾表現非常性感，濃郁又滑順的口感，圓潤細緻的境界，最後帶有清新爽口的感覺，達到將香檳最完美平衡的境界。由開胃菜到甜品，法國酩悅香檳都是完美的配合。非常適合搭配：生魚片與殼類海鮮，烘烤或些許調味的肉類。<a
+                                    class="more" href="./tabs_wine/tab_champagne.html">more</a></p>
+                        </div>
+                    </div>
+                    <div id="t_card_2" class="card_style_t">
+                        <div class="card-t-text"></div>
+                        <div class="TinC-t">
+                            <h3>坎帕羅拉 亞曼柔妮 白蘭地</h3>
+                            <h4>Campagnola Grappa di Amarone</h4>
+                            <p>色澤透明純淨，散發出優雅細緻的果香，入口平衡和諧，口味甘洌，醇美無瑕，餘香縈繞不散。<a class="more"
+                                    href="./tabs_wine/tab_brandy.html">more</a></p>
+                        </div>
+                    </div>
+                    <div id="t_card_3" class="card_style_t">
+                        <div class="card-t-text"></div>
+                        <div class="TinC-t">
+                            <h3>克勒雷登山 ‧ 莊園 希哈紅酒</h3>
+                            <h4>Clarendon Hills Domaine Syrah</h4>
+                            <p>深沉鮮紅，些許紫羅蘭光暈，多層次且富含礦物感。口感光滑圓潤，酒體適中，竄流著黑醋栗與玫瑰花瓣風味。粗啜或許誤判為甜美細緻的風格，帶清新明亮的酸度。<a class="more"
+                                    href="./tabs_wine/tab_redwine.html">more</a></p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 肉卡 -->
+                <div class="card-area-b card-area-style active" data-aos="fade-left">
+                    <div id="fdmusk-b" class="fdmusk active"></div>
+                    <div id="b_card_1" class="card_style_b active">
+                        <div class="card-b-text"></div>
+                        <div class="TinC-b">
+                            <h3>澳洲7+和牛肋眼牛排</h3>
+                            <h4>Australia wagyu beef ribeye rank 7+ steak</h4>
+                            <p>對於澳洲和牛來講，其實是不需要用任何調味料提前醃製或者醬汁，可以用海鹽和黑胡椒調味，享受澳洲和牛最原始的味道，體會它的原汁鮮美，品嘗來自大自然的饋贈。<a
+                                    class="more" href="./tabs_meat/tab_au_meat.html">more</a></p>
+                        </div>
+                    </div>
+                    <div id="b_card_2" class="card_style_b">
+                        <div class="card-b-text"></div>
+                        <div class="TinC-b">
+                            <h3>日本A4和牛牛排</h3>
+                            <h4>Japanese wagyu beef rank A4 steak</h4>
+                            <p>關於日本和牛，是指經過品種改良，由於血統及飼養方式與其他地區、品種的牛隻有別，因此形成獨特的風味。其肉中的不飽和脂肪酸較高、油花分布均勻，口感極好，入口即化，一般牛肉難以望其項背。<a
+                                    class="more" href="./tabs_meat/tab_jp_meat.html">more</a></p>
+                        </div>
+                    </div>
+                    <div id="b_card_3" class="card_style_b">
+                        <div class="card-b-text"></div>
+                        <div class="TinC-b">
+                            <h3>美國頂級老饕牛排</h3>
+                            <h4>American ribeye cap steak</h4>
+                            <p>傳奇的老饕牛排看起來像蓋子，也被稱為「上蓋肉」。它兼具嫩度和油花，風味十足。一頭牛只能做十二份八盎司的老饕牛排。烤的方式有點像洗三溫暖，讓牛肉歷經不同的溫度。<a
+                                    class="more" href="./tabs_meat/tab_us_meat.html">more</a></p>
+                        </div>
+                    </div>
+                    <div id="card-btn-b" class="card-btns card-btns-r">
+                        <div class="btn_area">
+                            <div class="fcb_btn active"></div>
+                        </div>
+                        <div class="btn_area">
+                            <div class="fcb_btn"></div>
+                        </div>
+                        <div class="btn_area">
+                            <div class="fcb_btn"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile酒肉 -->
+        <div id="food_phone">
+            <div class="title_bg">
+                <!-- title_bg 的 css樣式 可以共用 -->
+                <div class="title_l"></div>
+                <p>FOOD</p>
+                <div class="title_r"></div>
+            </div>
+
+            <div class="container mt-5">
+                <div class="row pt-5">
+                    <div class="col">
+                        <div id="champagne_card" class="phone_card_t active">
+                            <img src="./img/food/phone/food-wine-phone-champagne.png" class="card-img-top p-3"
+                                alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">酩悅香檳</h5>
+                                <h6>Moet et Chandon</h6>
+                                <p>在味蕾表現非常性感，濃郁又滑順的口感，圓潤細緻的境界，最後帶有清新爽口的感覺，達到將香檳最完美平衡的境界。由開胃菜到甜品，法國酩悅香檳都是完美的配合。非常適合搭配：生魚片與殼類海鮮，烘烤或些許調味的肉類。<a
+                                        class="more" href="./tabs_wine/tab_champagne.html">more</a></p>
+                            </div>
+                        </div>
+                        <div id="brandy_card" class="phone_card_t">
+                            <img src="./img/food/phone/food-wine-phone-brandy.png" class="card-img-top p-3" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">坎帕羅拉 亞曼柔妮 白蘭地</h5>
+                                <h6>Campagnola Grappa di Amarone</h6>
+                                <p>色澤透明純淨，散發出優雅細緻的果香，入口平衡和諧，口味甘洌，醇美無瑕，餘香縈繞不散。<a class="more"
+                                        href="./tabs_wine/tab_brandy.html">more</a></p>
+                            </div>
+                        </div>
+                        <div id="redwine_card" class="phone_card_t">
+                            <img src="./img/food/phone/food-wine-phone-red.png" class="card-img-top p-3" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">克勒雷登山 ‧ 莊園 希哈紅酒</h5>
+                                <h6>Clarendon Hills Domaine Syrah</h6>
+                                <p>深沉鮮紅，些許紫羅蘭光暈，多層次且富含礦物感。口感光滑圓潤，酒體適中，竄流著黑醋栗與玫瑰花瓣風味。粗啜或許誤判為甜美細緻的風格，帶清新明亮的酸度。<a
+                                        class="more" href="./tabs_wine/tab_redwine.html">more</a></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 d-flex justify-content-center">
+                    <div class="phone_card_btns_t d-flex justify-content-center align-items-center">
+                        <div class="phone_btn_t active mx-2 my-3"></div>
+                        <div class="phone_btn_t mx-2 my-3"></div>
+                        <div class="phone_btn_t mx-2 my-3"></div>
+                    </div>
+                </div>
+                <div class="row py-5">
+                    <div class="col-12">
+                        <div id="au_card" class="phone_card_b active">
+                            <img src="./img/food/phone/food-meat-phone-au.png" class="card-img-top p-3" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">澳洲7+和牛肋眼牛排</h5>
+                                <h6>Australia wagyu beef ribeye rank 7+ steak</h6>
+                                <p class="card-text">
+                                    對於澳洲和牛來講，其實是不需要用任何調味料提前醃製或者醬汁，可以用海鹽和黑胡椒調味，享受澳洲和牛最原始的味道，體會它的原汁鮮美，品嘗來自大自然的饋贈。
+                                    <a class="more" href="./tabs_meat/tab_us_meat.html">more</a>
+                                </p>
+                            </div>
+                        </div>
+                        <div id="jp_card" class="phone_card_b">
+                            <img src="./img/food/phone/food-meat-phone-jp.png" class="card-img-top p-3" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">日本A4和牛牛排</h5>
+                                <h6>Japanese wagyu beef rank A4 steak</h6>
+                                <p>關於日本和牛，是指經過品種改良，由於血統及飼養方式與其他地區、品種的牛隻有別，因此形成獨特的風味。其肉中的不飽和脂肪酸較高、油花分布均勻，口感極好，入口即化，一般牛肉難以望其項背。<a
+                                        class="more" href="./tabs_meat/tab_jp_meat.html">more</a></p>
+                            </div>
+                        </div>
+                        <div id="us_card" class="phone_card_b">
+                            <img src="./img/food/phone/food-meat-phone-us.png" class="card-img-top p-3" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">美國頂級老饕牛排</h5>
+                                <h6>American ribeye cap steak</h6>
+                                <p>傳奇的老饕牛排看起來像蓋子，也被稱為「上蓋肉」。它兼具嫩度和油花，風味十足。一頭牛只能做十二份八盎司的老饕牛排。烤的方式有點像洗三溫暖，讓牛肉歷經不同的溫度。<a
+                                        class="more" href="./tabs_meat/tab_us_meat.html">more</a></p>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 d-flex justify-content-center">
+                        <div class="phone_card_btns_b d-flex justify-content-center align-items-center">
+                            <div class="phone_btn_b active mx-2 my-3"></div>
+                            <div class="phone_btn_b mx-2 my-3"></div>
+                            <div class="phone_btn_b mx-2 my-3"></div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- 媒體 -->
+    <section id="media_point">
+
+        <div id="media" class="container-fluid" data-aos="zoom-in-down">
+
+            <div class="row">
+                <div class="title_bg" data-aos="fade-right" data-aos-offset="300" data-aos-easing="ease-in-sine">
+                    <!-- title_bg 的 css樣式 可以共用 -->
+                    <div class="title_l"></div>
+                    <p>MEDIA</p>
+                    <div class="title_r"></div>
+                </div>
+            </div>
+
+            <div class="media">
+                <div class="swiper-container media-swiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <div class="lightbox-thumb bg1"
+                                data-lb-content="https://www.youtube.com/embed/kSLsF4xakTA?rel=0&hd=1&output=embed&autoplay=1"
+                                data-lb-content-type="video">
+                                <div class="lightbox-thumb-details">
+                                    <div class="lightbox-button"></div>
+                                    <div class="lightbox-video-details"></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="swiper-slide">
+                            <div class="lightbox-thumb bg2"
+                                data-lb-content="https://www.youtube.com/embed/EqufxCa5g8c?rel=0&hd=1&output=embed&autoplay=1"
+                                data-lb-content-type="video">
+                                <div class="lightbox-thumb-details">
+                                    <div class="lightbox-button"></div>
+                                    <div class="lightbox-video-details"></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="swiper-slide">
+                            <div class="lightbox-thumb bg3"
+                                data-lb-content="https://www.youtube.com/embed/Zdfr2lSq8EM?rel=0&hd=1&output=embed&autoplay=1"
+                                data-lb-content-type="video">
+                                <div class="lightbox-thumb-details">
+                                    <div class="lightbox-button"></div>
+                                    <div class="lightbox-video-details"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="media_phone">
+
+            <div class="row">
+                <div class="title_bg">
+                    <!-- title_bg 的 css樣式 可以共用 -->
+                    <div class="title_l"></div>
+                    <p>MEDIA</p>
+                    <div class="title_r"></div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="swiper-container menu-swiper media-p">
+                    <!-- Swiper -->
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide video-container">
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/kSLsF4xakTA"
+                                frameborder="0"
+                                allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                                allowfullscreen></iframe>
+                        </div>
+                        <div class="swiper-slide video-container">
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/EqufxCa5g8c"
+                                frameborder="0"
+                                allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                                allowfullscreen></iframe>
+                        </div>
+                        <div class="swiper-slide video-container">
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/Zdfr2lSq8EM"
+                                frameborder="0"
+                                allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                                allowfullscreen></iframe>
+                        </div>
+                    </div>
+                    <!-- Navigation Add Arrows -->
+                    <!-- <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev"></div> -->
+
+                    <!-- Add Pagination -->
+                    <div class="swiper-pagination media-s"></div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- 頁尾 -->
+    <footer id="footer_point">
+        <div>
+            <div id="footer_1" class="container-fluid">
+                <div class="ftlogo">
+                    <img class="logo" src="./img/logo/MeatGQ-LOGO-白色.svg" alt="">
+                </div>
+                <div class="ftbar">
+                    <ul class="ftbtns">
+                        <li class="ftbtn"><a href="#menu">MENU</a></li>
+                        <li class="ftbtn"><a href="#about">ABOUT</a></li>
+                        <li class="ftbtn"><a href="#food">FOOD</a></li>
+                        <li class="ftbtn"><a href="#media">MEDIA</a></li>
+                    </ul>
+                </div>
+                <div class="ftinfo">
+                    <div class="address-area">
+                        <div class="address">
+                            <p>MeatGQ檜木炙烤牛排館</p>
+                            <p>04-2383-0258
+                            </p>
+                            <p>台中市益豐路四段669號1F</p>
+                        </div>
+                    </div>
+
+                    <div class="copyright">
+                        <p>©本網站僅供教學及練習使用，若有冒犯請洽0905-737573。</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+
+
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+        integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+        crossorigin="anonymous"></script>
+
+    <!-- Lightbox JS -->
+    <script
+        src="https://static.codepen.io/assets/common/stopExecutionOnTimeout-157cd5b220a5c80d4ff8e0e70ac069bffd87a61252088146915e8726e5d9f147.js"></script>
+    <!-- Swiper JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.1.0/js/swiper.js"></script>
+    <!-- <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script> -->
+
+
+    <!-- nav JS -->
+    <script src="./script/nav.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/lax.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+
+    </script>
+
+    <!-- menu book JS -->
+    <script type="text/javascript" src="./book/extras/jquery.min.1.7.js"></script>
+    <script type="text/javascript" src="./book/extras/modernizr.2.5.3.min.js"></script>
+    <script type="text/javascript" src="./book/lib/hash.js"></script>
+    <script type="text/javascript" src="./script/menu_book.js"></script>
+
+    <!-- menu phone Swiper JS -->
+    <script src="./script/menu_phone.js"></script>
+    <!-- food card js -->
+
+    <script src="./script/food_card.js"></script>
+
+
+
+    <!-- Lightbox JS -->
+    <script
+        src="https://static.codepen.io/assets/common/stopExecutionOnTimeout-157cd5b220a5c80d4ff8e0e70ac069bffd87a61252088146915e8726e5d9f147.js"></script>
+    <!-- Swiper JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.1.0/js/swiper.js"></script>
+    <!-- food_card 外連 -->
+    <script src="./script/food_card.js"></script>
+    <!-- media_swiper 外連 -->
+    <script src="./script/media_swiper.js"></script>
+    <!-- media_lightbox 外連 -->
+    <script src="./script/media_lightbox.js"></script>
+    <!-- AOS js link -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+</body>
+
+</html>
